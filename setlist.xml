@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="stylesheet.css"?>
+
+<songlist>
+    <header>Music Setlist</header>
+    <author><name>Maroon Five</name>
+        <song name="Payphone">
+            <title>Payphone</title>
+            <year>Year Released: 2012</year>
+            <genre>Pop</genre>
+        </song>
+
+        <song name="Sugar">
+            <title>Sugar</title>
+            <year>Year Released: 2015</year>
+            <genre>Pop</genre>
+        </song>
+    </author>
+    
+    <author><name>Panic! At The Disco</name>
+        <song name="Hey Look Ma, I Made It!">
+            <title>Hey Look Ma, I Made It!</title>
+            <year>Year Released: 2018</year>
+            <genre>Pop</genre>
+            <genre>Indie</genre>
+        </song>
+        
+        <song name="Death Of A Bachelor">
+            <title>Death Of A Bachelor</title>
+            <year>Year Released: 2016</year>
+            <genre>Pop</genre>
+        </song>
+    </author>
+    
+    <author><name>Eric Nam</name>
+        <song name="Runaway">
+            <title>Runaway</title>
+            <year>Year Released: 2019</year>
+            <genre>K-Pop</genre>
+        </song>
+        
+        <song name="Honestly">
+            <title>Honestly</title>
+            <year>Year Released: 2018</year>
+            <genre>K-Pop</genre>
+        </song>
+    </author>
+    
+    <author><name>Ed Sheeran</name>
+        <song name="Thinking Out Loud">
+            <title>Thinking Out Loud</title>
+            <year>Year Released: 2014</year>
+            <genre>Pop</genre>
+        </song>
+        
+        <song name="Perfect">
+            <title>Perfect</title>
+            <year>Year Released: 2017</year>
+            <genre>Pop</genre>
+        </song>
+        
+        <song name="Photograph">
+            <title>Photograph</title>
+            <year>Year Released: 2014</year>
+            <genre>Folk</genre>
+        </song>
+    </author>
+    
+    <author><name>Taylor Swift</name>
+        <song name="Red">
+            <title>Red</title>
+            <year>Year Released: 2012</year>
+            <genre>Pop</genre>
+            <genre>Country</genre>
+            <genre>Rock</genre>
+        </song>
+    </author>
+    
+</songlist>
