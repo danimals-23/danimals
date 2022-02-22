@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Joe's Hotdog Stand</title>
+
+    <style>
+    
+        table {
+            border: 2px solid;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightblue;
+            font-size: 20px;
+        }
+        td {
+            border: 1px solid;
+            padding: 10px;
+            background-color: white;
+        }
+        table tr:nth-child(1) {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 35px;
+        }
+        body {
+            background-color: beige;
+        }
+    
+    </style>
+
+</head>
+
+<body>
+    <script language="javascript">
+        numHotDogs = prompt("How many hotdogs do you want?", "");
+        numFries = prompt("How many fries do you want?", "");
+        numSodas = prompt("How many sodas do you want?", "")
+        numHotDogs = parseInt(numHotDogs);
+        numFries = parseInt(numFries);
+        numSodas = parseInt(numSodas);
+        
+        subtotal = numHotDogs * 3.75 + numFries * 2.00 + numSodas * 1.80;
+        if(subtotal >= 20.00){
+            subtotal = subtotal * 0.90;
+        }
+        subtotal = Math.round(subtotal * 100)/100;
+        tax = subtotal * 0.0625;
+        tax = Math.round(tax * 100)/100;
+        final = subtotal + tax;
+        final = Math.round(final * 100)/100;
+        
+        
+        document.write("<h1> Joe's Hotdog Stand </h1>")
+        document.write("<h2> Your order receipt </h2>")
+        document.write("<table class='mainTable'>");
+        document.write("<div class='topRow'><tr><td>You ordered &nbsp </td> <td> Price &nbsp </tr></div>");
+        document.write("<tr><td>" + numHotDogs + " hotdogs </td> <td> Subtotal: $" + subtotal + "</td></tr>");
+        document.write("<tr><td>" + numFries + " fries </td> <td> Tax: $" + tax + "</td></tr>");
+        document.write("<tr><td>" + numSodas + " sodas </td> <td> Final price: $" + final + "</td></tr>");
+        document.write("</table>");
+        
+    </script>
+    
+</body>
