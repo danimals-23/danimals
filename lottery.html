@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        text-align: center;
+        font-size: 2vw;
+        background-color: azure;
+    }
+    h1 {
+        font-family: Helvetica;
+    }
+    .results {
+        font-weight: bolder;
+    }
+</style>
+</head>
+
+<body>
+    <script language="javascript">
+        function uniqueRandom(quantity, max){
+            const arr = [];
+            while(arr.length < quantity){
+                var possibleInt = Math.floor(Math.random() * max) + 1
+                // indexOf will return -1 if the number is not already in the array
+                if(arr.indexOf(possibleInt) === -1){
+                    arr.push(possibleInt);
+                }
+            }
+            return(arr);
+        }
+
+        lucky = 3;
+
+        user_Array = uniqueRandom(5, 48);
+        lucky2 = Math.floor(Math.random() * 18 + 1);
+        user_Array.push(lucky2);
+
+        document.write("<h1> The Lottery </h1>");
+
+        document.write("<p><div class='results'>Your pick, unsorted: </div>");
+        for(let i = 0; i < 6; i++){
+            document.write(user_Array[i] + "  &nbsp;");
+        }
+        document.write("</p>");
+
+        let popped = user_Array.pop();
+        user_Array.sort(function(a, b){return a - b});
+        user_Array.push(popped);
+
+        document.write("<p><div class='results'> Your pick, sorted: </div>");
+        for(let i = 0; i < 6; i++){
+            document.write(user_Array[i] + "  &nbsp;");
+        }
+        
+        document.write("<br /> <br /> Lucky Ball Value: <br />" + lucky);
+
+        winning_Array = [12, 15, 24, 35, 48, 3]
+
+        document.write("<br /> Winning Numbers: <br />")
+        for(let i = 0; i < 6; i++){
+            document.write(winning_Array[i] + "  &nbsp;");
+        }
+        document.write("<br />")
+
+        numMatches = 0;
+        for(let i = 0; i < 5; i++){
+            if(user_Array[i] == winning_Array[i]){
+                numMatches++;
+            }
+        }
+
+        document.write("</p> <div class='results'>RESULTS</div>");
+        document.write(" Number of matches: " + numMatches);
+
+        if(user_Array[5] == winning_Array[5]){
+            document.write("<br /> The Lucky Ball matched! <br />");
+        }
+        else{
+            document.write("<br /> The Lucky Ball did not match. <br />");
+        }
+
+        if(user_Array[5] == winning_Array[5]){
+            if(numMatches == 0){
+                payout = 4;
+            }
+            else if(numMatches == 1){
+                payout = 6;
+            }
+            else if(numMatches == 2){
+                payout = 25;
+            }
+            else if(numMatches == 3){
+                payout = 150;
+            }
+            else if(numMatches == 4){
+                payout = 5000;
+            }
+            else{
+                payout = "7000 a WEEK for LIFE.";
+            }
+        }
+        else{
+            if(numMatches == 0){
+                payout = 0;
+            }
+            else if(numMatches == 1){
+                payout = 0;
+            }
+            else if(numMatches == 2){
+                payout = 3;
+            }
+            else if(numMatches == 3){
+                payout = 20;
+            }
+            else if(numMatches == 4){
+                payout = 200;
+            }
+            else{
+                payout = "25000 a YEAR for LIFE.";
+            }
+        }
+
+        document.write("<div class='results'> Your payout is: $" + payout + "</div>");
+
+    </script>
+</body>
+
+</html>
