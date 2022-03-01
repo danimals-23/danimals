@@ -36,10 +36,10 @@
         lucky2 = Math.floor(Math.random() * 18 + 1);
         user_Array.push(lucky2);
 
-        document.write("<h1> The Lottery </h1>");
+        document.write("<h1> Lucky Lottery </h1>");
 
         document.write("<p><div class='results'>Your pick, unsorted: </div>");
-        for(let i = 0; i < 6; i++){
+        for(let i = 0; i < 5; i++){
             document.write(user_Array[i] + "  &nbsp;");
         }
         document.write("</p>");
@@ -49,19 +49,21 @@
         user_Array.push(popped);
 
         document.write("<p><div class='results'> Your pick, sorted: </div>");
-        for(let i = 0; i < 6; i++){
+        for(let i = 0; i < 5; i++){
             document.write(user_Array[i] + "  &nbsp;");
         }
+
+        document.write("<p><div class='results'>Your lucky ball value: </div>" + lucky2 + "</p>");
         
-        document.write("<br /> <br /> Lucky Ball Value: <br />" + lucky);
+        document.write("<p><div class='results'>Lucky Ball Value: </div>" + lucky );
 
         winning_Array = [12, 15, 24, 35, 48, 3]
 
-        document.write("<br /> Winning Numbers: <br />")
-        for(let i = 0; i < 6; i++){
+        document.write("<div class='results'>Winning Numbers: </div>")
+        for(let i = 0; i < 5; i++){
             document.write(winning_Array[i] + "  &nbsp;");
         }
-        document.write("<br />")
+        document.write("</p>")
 
         numMatches = 0;
         for(let i = 0; i < 5; i++){
@@ -126,7 +128,6 @@
     </script>
 
     <button onClick="window.location.reload();">Test your luck!</button>
-    
 </body>
 
 </html>
